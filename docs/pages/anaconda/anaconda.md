@@ -1,27 +1,16 @@
 ---
 title: Anaconda Environment Management
 nav_order: 2
+has_children: true
 ---
+
+# Anaconda Environment Management
+{:.no_toc}
 
 This page goes over the basics of Environment Management through the Anaconda Python distribution.
 
-# Table of Contents
-
-+ [Why Anaconda Environments?](#why-anaconda-environments?)
-+ [Installing Anaconda](#installing-anaconda)
-+ [Getting Started with Environments](#getting-started-with-environments)
-    + [Using an Existing Environment](#using-an-existing-environment)
-    + [Creating an Environment from Scratch](#creating-an-environment-from-scratch)
-+ [Using Environments](#using-environments)
-    + [General Workflow](#general-workflow)
-    + [Executing Python (.py) Files](#executing-python-(.py)-files)
-        + [Via Command Line](#via-command-line)
-        + [Via Spyder IDE](#via-spyder-ide)
-    + [Executing Applications](#executing-applications)
-        + [Via Anaconda Navigator](#via-anaconda-navigator)
-    + [Using Jupyter Notebooks](#using-jupyter-notebooks)
-+ [Exporting an Environment](#exporting-an-environment)
-+ [Step-by-Step Example](#step-by-step-example)
+* TOC
+{:toc}
 
 # Why Anaconda Environments?
 
@@ -42,9 +31,22 @@ An important note: Anaconda begins in the “base” environment. This environme
 ## Using an Existing Environment
 
 If you are not starting an environment from scratch and are instead wishing to use an existing environment, follow these instructions.
+
+### Installing Existing Environment From Scratch
+
+If you are installing the existing environment from scratch, meaning that you have not worked with this environment before, then follow these instructions:
+
 1.	Find the `environment.yml` file located in the repository that you are wishing to work with.
 2.	Launch the Anaconda Prompt and type, `conda env create -f environment.yml` in the prompt. Anaconda will handle the download and installation of all dependencies.
 3.	Start working with your up-to-date repository!
+
+### Updating Existing Environment
+
+If you are updating your Anaconda Environment because someone has added a dependency to it, then follow these instructions:
+
+1. Find the `environment.yml` file located in the repository that you are wishing to update.
+2. Launch the Anaconda Prompt and activate the Anaconda Environment that you wish to update with `conda activate myenv` where `myenv` is the name of the Environment.
+3. Update the `myenv` environment with the `environment.yml` file that you located in step 1 by typing `conda env update -f environment.yml` into the Anaconda Prompt and hitting <kbd>Enter</kbd>.
 
 ## Creating an Environment from Scratch
 
@@ -99,81 +101,3 @@ Jupyter notebooks are really helpful for prototyping code. To run one, do the fo
 1.	Follow the instructions under Via Anaconda Navigator to open the Jupyter Notebook application. This should open a browser displaying the files on your system.
 2.	Navigate to the repository you are wanting to work with by clicking through the file structure.
 3.	Click on the notebook (.ipynb) you are wanting to run to open a new browser tab of your notebook.
-
-# Exporting an Environment
-
-Congratulations! You’ve had a paper accepted and it’s time to publish the repository to the greater scientific community. Follow these steps to create an environment YAML file that will be added to the repository.
-1.	Ensure that the repository on your local machine matches the repository in GitHub.
-2.	With the proper environment activated (using `conda activate myenv` where `myenv` is the name of the environment), type the following in the Anaconda Prompt: `conda env export  > environment.yml`.
-3.	Place the `environment.yml` file in the proper place in the repository. This means placing it in a location where it will be easily discoverable by the end-user. Don’t stick it in a folder that has a million files where it will likely get lost.
-4.	Update the documentation for the repository to note where to find the `environment.yml` file and how to create an Anaconda environment from this file. You can just use a slightly modified version of the instructions found in the Using an Existing Environment section.
-5.	Add the `environment.yml` file to the repository, commit, and push changes to GitHub.
-
-# Step-by-Step Example
-This section shows a step-by-step example of how to download Anaconda, set up an environment, begin working with the environment, and run MyoSim.
-
-1.	Download GitHub Desktop and follow installation instructions by visiting https://desktop.github.com/ and clicking the “Download for Windows” button.
-
- ![How to picture #1](../../assets/images/anaconda/howto_1.png)
-
-2.	Launch GitHub Desktop through the Start Menu.
-
-![How to picture #2](../../assets/images/anaconda/howto_2.png)
-
-3.	Sign into your GitHub account when prompted.
-4.	Click “File” then click “Clone Repository”.
-
- ![How to picture #3](../../assets/images/anaconda/howto_3.png)
-
-5.	Clone the Python_MyoSim repository.
-
-![How to picture #4](../../assets/images/anaconda/howto_4.png) 
-
-6.	Download Anaconda - Go to https://www.anaconda.com/distribution/ and download the Python 3.7 version of Anaconda after clicking the “Windows” button.
-
-![How to picture #5](../../assets/images/anaconda/howto_5.png) 
-
-7.	Follow the installation instructions prompted by the Anaconda installer and accept all default options.
-8.	Launch the Anaconda Prompt from the Start Menu.
-
-![How to picture #6](../../assets/images/anaconda/howto_6.png)
-
-9.	Type `conda create –name <NAME_OF_YOUR_ENVIRONMENT>` where `<NAME_OF_YOUR_ENVIRONMENT>` is the name of the environment you would like to create. In this example, I’ve chosen `example_environment`. Type `y` for “yes” when you’re prompted to and hit <kbd>Enter</kbd> on your keyboard.
-
-![How to picture #7](../../assets/images/anaconda/howto_7.png)
-
-10.	Launch the Anaconda Navigator from the Start Menu.
-
-![How to picture #8](../../assets/images/anaconda/howto_8.png)
-
-11.	 Change into the created environment by selecting it from the drop-down menu in the Anaconda Navigator.
-
-![How to picture #9](../../assets/images/anaconda/howto_9.png)
-
-12.	Click the “Environments” button on the left panel of the Anaconda Navigator.
-
-![How to picture #10](../../assets/images/anaconda/howto_10.png)
-
-13.	Change the package view to “Not Installed” by selecting it from the drop-down menu.
-
-![How to picture #11](../../assets/images/anaconda/howto_11.png)
-
-14.	Search for and click the check box of numpy package.
-
-![How to picture #12](../../assets/images/anaconda/howto_12.png)
-
-15.	Repeat step 14 for the following packages: “pandas”, “matplotlib”, “scipy”. 
-16.	Click “Apply” on the bottom left of the screen and proceed through the prompts.
-17.	Navigate back to “Home”.
-
-![How to picture #13](../../assets/images/anaconda/howto_13.png)
-
-18.	Install Spyder and Jupyter Notebook by clicking “Install” for both applications.
-
-![How to picture #14](../../assets/images/anaconda/howto_14.png)
-
-19.	Launch Spyder through the same Anaconda Navigator window after installation.
-
-![How to picture #15](../../assets/images/anaconda/howto_15.png)
-
-20.	Begin coding.
