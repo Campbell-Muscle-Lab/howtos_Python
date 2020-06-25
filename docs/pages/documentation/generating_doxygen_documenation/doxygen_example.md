@@ -26,13 +26,21 @@ This page goes over the steps required to generate Doxygen documentation from co
     ![Step 6](imgs/step_6.png)
 7. In the main GUI menu, select the `Scan recursively` checkbox.
     ![Step 7](imgs/step_7.png)
-8. 
-![Step 8](imgs/step_8.png)
-![Step 9](imgs/step_9.png)
-![Step 10](imgs/step_10.png)
-![Step 11](imgs/step_11.png)
-![Step 12](imgs/step_12.png)
-![Step 13](imgs/step_13.png)
-![Step 14](imgs/step_14.png)
-![Step 15](imgs/step_15.png)
-![Step 16](imgs/step_16.png)
+8. Press the `Select...` button to choose the directory where the generated documentation will go. 
+    ![Step 8](imgs/step_8.png)
+9. Click the `Select Folder` button on the pop-up dialog. You won't have to select a new folder if you followed step 3 correctly.
+    ![Step 9](imgs/step_9.png)
+10. Click the `Next` button to advance to the "Mode" menu.
+    ![Step 10](imgs/step_10.png)
+11. Select the "All Entities", "Include cross-referenced source code in the output", and "Optimize for Java or C# output" options and click the `Next` button to advance the the "Output" menu.
+    ![Step 11](imgs/step_11.png)
+12. Under the "HTML" options, select "with navigation panel". Deselct the "LaTeX" option. Click the `Next` button to advance the "Diagrams" menu.
+    ![Step 12](imgs/step_12.png)
+13. Click the `Next` button to advance to the "Run" menu. You don't need to do any customization here.
+    ![Step 13](imgs/step_13.png)
+14. Click the `Run Doxygen` button and allow Doxygen to run.
+    ![Step 14](imgs/step_14.png)
+15. Click the `Show HTML output` button.
+    ![Step 15](imgs/step_15.png)
+16. Verify that the documentation was generated correctly. And begin exploring your documented code!
+    ![Step 16](imgs/step_16.png)
