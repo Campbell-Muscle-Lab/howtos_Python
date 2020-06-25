@@ -1,6 +1,7 @@
 ---
 title: Documentation Best Practices
-nav_order: 4
+nav_order: 1
+parent: Documenting Python Code
 has_children: true
 ---
 

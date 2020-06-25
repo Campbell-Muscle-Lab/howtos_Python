@@ -2,6 +2,7 @@
 title: Visual Studio Docstring Extension
 nav_order: 1
 parent: Documentation Best Practices
+grand_parent: Documenting Python Code
 ---
 
 # Visual Studio Docstring Extension
