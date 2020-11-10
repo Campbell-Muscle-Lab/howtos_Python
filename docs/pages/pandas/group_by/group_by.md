@@ -2,7 +2,7 @@
 title: group_by
 nav_order: 1
 has_children: False
-parent: pandas
+parent: Pandas
 ---
 
 # Group_by
