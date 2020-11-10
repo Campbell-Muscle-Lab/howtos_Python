@@ -20,7 +20,7 @@ Note: Environments are meant to serve as a way to ensure that Python package ins
 
 # Installing Anaconda
 
-Installing Anaconda is really simple. Go to the link, https://www.anaconda.com/distribution/#windows, and download the "Python 3.7 version." Accept all default settings.
+Installing Anaconda is really simple. Go to the link, [https://www.anaconda.com/distribution/#windows](https://www.anaconda.com/distribution/#windows), and download the "Python 3.7 version." Accept all default settings.
 Additionally, I find the Spyder IDE (Integrated Development Environment) to be helpful, although I do most of my code prototyping in the Jupyter Notebooks already installed with Anaconda. This can be installed by opening the Anaconda Navigation program and clicking the install button under the Sypder icon.
 
 # Getting Started with Environments
@@ -36,9 +36,17 @@ If you are not starting an environment from scratch and are instead wishing to u
 
 If you are installing the existing environment from scratch, meaning that you have not worked with this environment before, then follow these instructions:
 
-1.	Find the `environment.yml` file located in the repository that you are wishing to work with.
-2.	Launch the Anaconda Prompt and type, `conda env create -f environment.yml` in the prompt. Anaconda will handle the download and installation of all dependencies.
-3.	Start working with your up-to-date repository!
++ Find the `environment.yml` file located in the repository that you are wishing to work with.
++ Open an Anaconda prompt
+  + One way is
+    + open Anaconda Navigator
+    + switch to the Environments tab (left-hand side)
+    + click on the arrow next to base (root)
+    + open terminal
++ change directory to the folder containing the `environment.yml` file
++ type `conda env create -f environment.yml` in the prompt
+  + Anaconda will handle the download and installation of all dependencies.
++ Start working with your up-to-date repository!
 
 ### Updating Existing Environment
 
