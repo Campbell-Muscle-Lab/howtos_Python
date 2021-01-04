@@ -12,4 +12,5 @@ One of the strengths of pandas is that it is tightly integrated with many other 
 
 ## Getting started
 
-+ [Intro to pandas](https://pandas.pydata.org/docs/getting_started/index.html#getting-started) from the official documentation.
++ [Intro to pandas](https://pandas.pydata.org/docs/getting_started/index.html#getting-started) - the official documentation
++ [A simple walkthrough with pandas](https://neuraspike.com/blog/simple-walk-through-with-pandas-for-data-science-part1/] - a relatively simple introduction with many examples and follow-on tutorials.
